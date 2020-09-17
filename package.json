@@ -1,0 +1,50 @@
+{
+  "author": {
+    "name": "suolun"
+  },
+  "bin": {
+    "api": "bin/init.js"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "commander": "^2.19.0",
+    "fs-extra": "^5.0.0",
+    "inquirer": "^7.1.0",
+    "lodash": "^4.17.5",
+    "node-fetch": "^1.7.3",
+    "prettier": "^1.19.1",
+    "translation.js": "^0.7.5",
+    "typescript": "^3.5.3"
+  },
+  "deprecated": false,
+  "description": "swagger typescript API",
+  "files": [
+    "pontCore",
+    "configSchema.json",
+    "src",
+    "lib",
+    "*.md",
+    "bin",
+    "templates",
+    "useRequest"
+  ],
+  "keywords": [
+    "pont",
+    "swagger",
+    "typescript",
+    "API"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "generate-api",
+  "scripts": {
+    "build": "rm -rf lib && npm run build-hooks-js && tsc",
+    "build-hooks-js": "tsc --project pontCore/tsconfig.json",
+    "dev": "tsc -w",
+    "pretest": "npm run build",
+    "watch": "tsc -w"
+  },
+  "typings": "lib/index.d.ts",
+  "version": "1.0.2"
+}
